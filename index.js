@@ -1,6 +1,5 @@
-const { CHANNEL, SERVER, STATUS, LIVE } = require("./config.json");
+const { TOKEN, CHANNEL, SERVER, STATUS, LIVE } = require(".env");
 const discord = require("discord.js");
-const TOKEN = require(".env");
 const client = new discord.Client();
 const ytdl = require('ytdl-core');
 
