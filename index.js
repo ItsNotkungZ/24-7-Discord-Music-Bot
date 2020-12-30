@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const client = new discord.Client();
 const ytdl = require('ytdl-core');
 
-client.on('ready', async () => {
+client.on('ready', async () = {
   client.user.setActivity(process.env.STATUS + " 😎")
   let channel = client.channels.cache.get(process.env.CHANNEL) || await client.channels.fetch(process.env.CHANNEL)
 
@@ -19,6 +19,6 @@ setInterval(async function() {
     const connection = await channel.join()
     connection.play(ytdl(process.env.LIVE))
   }
-}),
+}, 999999)
 
 client.login(process.env.TOKEN)
