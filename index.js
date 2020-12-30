@@ -2,8 +2,8 @@ const discord = require("discord.js");
 const client = new discord.Client();
 const ytdl = require('ytdl-core');
 
-client.on('ready', async () = {
-  client.user.setActivity(process.env.STATUS + " 😎")
+client.on('ready', async () => {
+  client.user.setActivity(STATUS + " 😎")
   let channel = client.channels.cache.get(process.env.CHANNEL) || await client.channels.fetch(process.env.CHANNEL)
 
   if(!channel) return;
