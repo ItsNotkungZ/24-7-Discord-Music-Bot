@@ -9,8 +9,6 @@ client.on('ready', async () => {
   if(!channel) return;
   const connection = await channel.join();
   connection.play(ytdl(process.env.LIVE))
-  filter: 'audioonly',
-  quality: 'lowestaudio',
 })
 
 setInterval(async function() {
