@@ -19,6 +19,6 @@ setInterval(async function() {
     const connection = await channel.join()
     connection.play(ytdl(process.env.LIVE))
   }
-}, 20000)
+}, 9999999999)
 
 client.login(process.env.TOKEN)
